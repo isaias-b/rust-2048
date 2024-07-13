@@ -1,0 +1,76 @@
+
+ *  Executing task: cargo run 
+
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.35s
+     Running `target/debug/animated_2048`
+2024-07-13T20:51:54.006117Z  INFO bevy_render::renderer: AdapterInfo { name: "AMD Radeon Pro 5500M", vendor: 0, device: 0, device_type: DiscreteGpu, driver: "", driver_info: "", backend: Metal }
+2024-07-13T20:51:54.861852Z  INFO bevy_winit::system: Creating new window "App" (0v1)
+2024-07-13T20:51:54.908499Z  INFO bevy_diagnostic::system_information_diagnostics_plugin::internal: SystemInfo { os: "MacOS 14.4.1 ", kernel: "23.4.0", cpu: "Intel(R) Core(TM) i9-9880H CPU @ 2.30GHz", core_count: "8", memory: "64.0 GiB" }
+now rendering board...
+3301100000000010 --R--> 0041000100000001
+start animate: MergeTiles(Tile { value: Number(8), position: Position { row: 0, col: 1 } }, Tile { value: Number(8), position: Position { row: 0, col: 0 } }, Position { row: 0, col: 2 }, Number(16))
+start animate: SlideTile(Tile { value: Number(2), position: Position { row: 1, col: 0 } }, Position { row: 1, col: 3 })
+start animate: SlideTile(Tile { value: Number(2), position: Position { row: 3, col: 2 } }, Position { row: 3, col: 3 })
+merging 0 and 0 to 4
+start animate: SpawnRandomTile(Tile { value: Number(2), position: Position { row: 3, col: 1 } })
+0041000100000101 --U--> 0142000100000000
+start animate: SlideTile(Tile { value: Number(2), position: Position { row: 3, col: 1 } }, Position { row: 0, col: 1 })
+start animate: MergeTiles(Tile { value: Number(2), position: Position { row: 0, col: 3 } }, Tile { value: Number(2), position: Position { row: 1, col: 3 } }, Position { row: 0, col: 3 }, Number(4))
+start animate: SlideTile(Tile { value: Number(2), position: Position { row: 3, col: 3 } }, Position { row: 1, col: 3 })
+merging 2 and 1 to 2
+start animate: SpawnRandomTile(Tile { value: Number(2), position: Position { row: 1, col: 0 } })
+0142100100000000 --R--> 0142000200000000
+start animate: MergeTiles(Tile { value: Number(2), position: Position { row: 1, col: 3 } }, Tile { value: Number(2), position: Position { row: 1, col: 0 } }, Position { row: 1, col: 3 }, Number(4))
+merging 2 and 0 to 2
+start animate: SpawnRandomTile(Tile { value: Number(2), position: Position { row: 1, col: 0 } })
+0142100200000000 --U--> 1143000000000000
+start animate: SlideTile(Tile { value: Number(2), position: Position { row: 1, col: 0 } }, Position { row: 0, col: 0 })
+start animate: MergeTiles(Tile { value: Number(4), position: Position { row: 0, col: 3 } }, Tile { value: Number(4), position: Position { row: 1, col: 3 } }, Position { row: 0, col: 3 }, Number(8))
+merging 3 and 0 to 3
+start animate: SpawnRandomTile(Tile { value: Number(2), position: Position { row: 1, col: 3 } })
+1143000100000000 --L--> 2430100000000000
+start animate: MergeTiles(Tile { value: Number(2), position: Position { row: 0, col: 0 } }, Tile { value: Number(2), position: Position { row: 0, col: 1 } }, Position { row: 0, col: 0 }, Number(4))
+start animate: SlideTile(Tile { value: Number(16), position: Position { row: 0, col: 2 } }, Position { row: 0, col: 1 })
+start animate: SlideTile(Tile { value: Number(8), position: Position { row: 0, col: 3 } }, Position { row: 0, col: 2 })
+start animate: SlideTile(Tile { value: Number(2), position: Position { row: 1, col: 3 } }, Position { row: 1, col: 0 })
+merging 2 and 4 to 2
+start animate: SpawnRandomTile(Tile { value: Number(2), position: Position { row: 3, col: 0 } })
+2430100000001000 --U--> 2430200000000000
+start animate: MergeTiles(Tile { value: Number(2), position: Position { row: 1, col: 0 } }, Tile { value: Number(2), position: Position { row: 3, col: 0 } }, Position { row: 1, col: 0 }, Number(4))
+merging 2 and 0 to 2
+start animate: SpawnRandomTile(Tile { value: Number(2), position: Position { row: 2, col: 1 } })
+2430200001000000 --U--> 3430010000000000
+start animate: MergeTiles(Tile { value: Number(4), position: Position { row: 0, col: 0 } }, Tile { value: Number(4), position: Position { row: 1, col: 0 } }, Position { row: 0, col: 0 }, Number(8))
+start animate: SlideTile(Tile { value: Number(2), position: Position { row: 2, col: 1 } }, Position { row: 1, col: 1 })
+merging 3 and 0 to 3
+start animate: SpawnRandomTile(Tile { value: Number(2), position: Position { row: 2, col: 0 } })
+3430010010000000 --L--> 3430100010000000
+start animate: SlideTile(Tile { value: Number(2), position: Position { row: 1, col: 1 } }, Position { row: 1, col: 0 })
+start animate: SpawnRandomTile(Tile { value: Number(2), position: Position { row: 3, col: 0 } })
+3430100010001000 --U--> 3430200010000000
+start animate: MergeTiles(Tile { value: Number(2), position: Position { row: 1, col: 0 } }, Tile { value: Number(2), position: Position { row: 2, col: 0 } }, Position { row: 1, col: 0 }, Number(4))
+start animate: SlideTile(Tile { value: Number(2), position: Position { row: 3, col: 0 } }, Position { row: 2, col: 0 })
+merging 2 and 1 to 2
+start animate: SpawnRandomTile(Tile { value: Number(2), position: Position { row: 2, col: 1 } })
+3430200011000000 --L--> 3430200020000000
+start animate: MergeTiles(Tile { value: Number(2), position: Position { row: 2, col: 0 } }, Tile { value: Number(2), position: Position { row: 2, col: 1 } }, Position { row: 2, col: 0 }, Number(4))
+merging 2 and 0 to 2
+start animate: SpawnRandomTile(Tile { value: Number(2), position: Position { row: 3, col: 0 } })
+3430200020001000 --U--> 3430300010000000
+start animate: MergeTiles(Tile { value: Number(4), position: Position { row: 1, col: 0 } }, Tile { value: Number(4), position: Position { row: 2, col: 0 } }, Position { row: 1, col: 0 }, Number(8))
+start animate: SlideTile(Tile { value: Number(2), position: Position { row: 3, col: 0 } }, Position { row: 2, col: 0 })
+merging 3 and 1 to 3
+start animate: SpawnRandomTile(Tile { value: Number(2), position: Position { row: 2, col: 3 } })
+3430300010010000 --U--> 4431100000000000
+start animate: MergeTiles(Tile { value: Number(8), position: Position { row: 0, col: 0 } }, Tile { value: Number(8), position: Position { row: 1, col: 0 } }, Position { row: 0, col: 0 }, Number(16))
+start animate: SlideTile(Tile { value: Number(2), position: Position { row: 2, col: 0 } }, Position { row: 1, col: 0 })
+thread 'Compute Task Pool (5)' panicked at src/main.rs:471:62:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+Encountered a panic in system `animated_2048::start_animate`!
+Encountered a panic in system `bevy_app::main_schedule::Main::run_main`!
+thread 'main' panicked at /Users/isaiasbartelborth/.cargo/registry/src/index.crates.io-6f17d22bba15001f/winit-0.29.15/src/platform_impl/macos/app_state.rs:387:33:
+called `Result::unwrap()` on an `Err` value: PoisonError { .. }
+
+ *  The terminal process "/bin/zsh '-l', '-c', 'cargo run'" terminated with exit code: 101. 
+ *  Terminal will be reused by tasks, press any key to close it. 
