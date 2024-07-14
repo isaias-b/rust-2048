@@ -153,8 +153,6 @@ impl Board {
                         let event = Action::SlideTile(tile, focus_cell.clone());
                         deferred = Some((tile, focus_cell.clone()));
                         deferred_slide = Some(event.clone());
-                        // board_clone.apply(event.clone());
-                        // events.push(event);
                     }
                     prev = Some((focus_idx, current_value));
                     focus_idx += 1;
@@ -188,12 +186,6 @@ impl Board {
 
         moved
     }
-
-    // pub fn spawn_random_tile(&mut self) {
-    //     if let Some(event) = self.plan_spawn_random_tile() {
-    //         self.apply(event);
-    //     }
-    // }
 }
 
 impl fmt::Display for Board {
@@ -348,8 +340,6 @@ mod tests {
 
     #[rustfmt::skip]
         const CASES: [TestCase; 40] = [
-            // TestCase { in_board: "3301100000000010", board: "0041000100000001", n_events: 4, in_direction: Direction::Right,  moved: true, name: "wild case" },
-            // TestCase { in_board: "2300200010010000", board: "0000000030001301", n_events: 4, in_direction: Direction::Down,  moved: true, name: "wild case" },
             TestCase { in_board: "0000011001100000", board: "0000200020000000", n_events: 2, in_direction: Direction::Left,  moved: true, name: "gap corner" },
             TestCase { in_board: "0000011001100000", board: "0000000200020000", n_events: 2, in_direction: Direction::Right, moved: true, name: "gap corner" },
             TestCase { in_board: "0000011001100000", board: "0220000000000000", n_events: 2, in_direction: Direction::Up,    moved: true, name: "gap corner" },

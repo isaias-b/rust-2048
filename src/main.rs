@@ -28,8 +28,7 @@ mod tile;
 const TILE_SIZE: f32 = 100.0;
 const TILE_GAP: f32 = 20.0;
 const BG_COLOR: Color = Color::rgb(1.0, 1.0, 1.0);
-const FONT_PATH: &str =
-    "/Users/isaiasbartelborth/Projects/isaias/rust/animated_2048/assets/Arial.ttf";
+const FONT_PATH: &str = "Arial.ttf";
 
 #[derive(Component, Debug, Deref, DerefMut)]
 struct Animating {
@@ -103,16 +102,6 @@ impl GameState {
         }
     }
 }
-
-// impl Default for GameState {
-//     // fn default() -> Self {
-//     //     Self {
-//     //         board: Board::new(4),
-//     //         entities: HashMap::new(),
-//     //         deferred_events: Vec::new(),
-//     //     }
-//     // }
-// }
 
 fn to_screen(pos: &Position) -> Vec2 {
     Vec2::new(
@@ -226,57 +215,6 @@ fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
     // game.board.spawn_random_tile();
 
     let mut board = Board::from_str("3301100000000010").unwrap();
-    // let mut replay = vec![
-    //     Direction::Right,
-    //     Direction::Up,
-    //     Direction::Left,
-    //     Direction::Down,
-    //     Direction::Left,
-    //     Direction::Up,
-    //     Direction::Up,
-    //     Direction::Left,
-    //     Direction::Down,
-    //     Direction::Left,
-    //     Direction::Down,
-    //     Direction::Down,
-    //     Direction::Left,
-    //     Direction::Left,
-    //     Direction::Down,
-    //     Direction::Right,
-    //     Direction::Down,
-    //     Direction::Right,
-    //     Direction::Down,
-    //     Direction::Left,
-    //     Direction::Down,
-    //     Direction::Right,
-    //     Direction::Right,
-    //     Direction::Right,
-    //     Direction::Left,
-    //     Direction::Right,
-    //     Direction::Right,
-    //     Direction::Right,
-    //     Direction::Left,
-    //     Direction::Down,
-    //     Direction::Right,
-    //     Direction::Down,
-    //     Direction::Left,
-    //     Direction::Down,
-    //     Direction::Down,
-    //     Direction::Left,
-    //     Direction::Left,
-    //     Direction::Down,
-    //     Direction::Left,
-    //     Direction::Left,
-    //     Direction::Left,
-    //     Direction::Down,
-    //     Direction::Left,
-    //     Direction::Left,
-    //     Direction::Down,
-    //     Direction::Down,
-    //     Direction::Left,
-    //     Direction::Left,
-    //     Direction::Down,
-    // ];
     let mut replay = vec![
         Direction::Right,
         Direction::Up,
@@ -292,10 +230,7 @@ fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
         Direction::Up,
     ];
     replay.reverse();
-    // let mut board = Board::from_str("2300200010010000").unwrap();
-    // let mut board = Board::from_str("1110000000000000").unwrap();
 
-    // let mut board = Board::from_str("5321332020000000").unwrap();
     let mut entities = HashMap::new();
     let size = board.size as f32;
     let offset = (TILE_SIZE + TILE_GAP) * (size - 1.0) * 0.5;
@@ -401,13 +336,8 @@ fn handle_input(
     };
 
     if let Some(direction) = direction {
-        // commands.spawn(direction);
         let events = game_state.board.plan_slide_and_merge(&direction);
-        // println!();
-        // for event in events.iter() {
-        //     println!("{:?}", event);
-        // }
-        // println!();
+
         event_writer.send_batch(events.iter().cloned());
 
         let mut g = game_state.as_mut();
