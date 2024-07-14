@@ -604,16 +604,10 @@ fn main() {
         .insert_resource(ClearColor(BG_COLOR))
         .add_systems(Update, bevy::window::close_on_esc)
         .add_systems(Startup, setup)
-        .add_systems(
-            Update,
-            (
-                handle_input,
-                start_animate,
-                update_animations,
-                check_animations,
-            )
-                .chain(),
-        )
+        .add_systems(PreUpdate, handle_input)
+        .add_systems(StateTransition, start_animate)
+        .add_systems(Update, update_animations)
+        .add_systems(PostUpdate, check_animations)
         .add_event::<Action>()
         .run();
 }
